@@ -2,8 +2,7 @@
 ---
 import Wrapper from "../Wrapper.astro";
 import Text from "../Text.astro";
----
-import headerImage from '../images/IMG_7085.jpg';
+import headerImage from "../images/IMG_7085.jpg";
 ---
 
 <section class="overflow-hidden bg-ink text-paper">
@@ -59,8 +58,8 @@ import headerImage from '../images/IMG_7085.jpg';
 
         <!-- Portrait -->
         <img
-          src="/src/images/headerImage"
-          alt="Pascal Vorwerk – Gitarrist"
+          src={headerImage.src} 
+          alt="Headerbild"
           class="relative z-10 aspect-[3/4] w-full object-cover"
         />
       </div>

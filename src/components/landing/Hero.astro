@@ -1,0 +1,108 @@
+
+---
+import Wrapper from "../Wrapper.astro";
+import Text from "../Text.astro";
+---
+
+<section class="overflow-hidden bg-ink text-paper">
+  <Wrapper class="pt-8 md:pt-10">
+    <div
+      class="flex flex-col gap-6 md:flex-row md:items-start md:justify-between"
+    >
+      <Text
+        variant="meta"
+        class="max-w-xs text-paper/60 md:max-w-none md:whitespace-nowrap"
+      >
+        guitarist · musician
+      </Text>
+
+      <ul class="flex flex-wrap gap-x-6">
+        <li>
+          <Text
+            tag="a"
+            variant="meta"
+            href="https://www.instagram.com/pascalvks/"
+            class="inline-flex min-h-[44px] items-center text-paper/60 hover:text-paper"
+          >Instagram</Text>
+        </li>
+        <li>
+          <Text
+            tag="a"
+            variant="meta"
+            href="https://www.youtube.com/@pascal_vorwerk"
+            class="inline-flex min-h-[44px] items-center text-paper/60 hover:text-paper"
+          >YouTube</Text>
+        </li>
+        <li>
+          <Text
+            tag="a"
+            variant="meta"
+            href="https://open.spotify.com/user/1146165881"
+            class="inline-flex min-h-[44px] items-center text-paper/60 hover:text-paper"
+          >Spotify</Text>
+        </li>
+      </ul>
+    </div>
+    
+
+    <div
+      class="my-16 md:my-24 flex flex-col sm:flex-row sm:items-center gap-8 md:gap-12"
+      data-reveal
+    >
+      <div class="relative w-70 md:w-86 shrink-0">
+        <!-- Versetzter orangefarbener Rahmen -->
+        <div
+          class="absolute inset-0 translate-x-4 translate-y-4 bg-accent"
+        ></div>
+
+        <!-- Portrait -->
+        <img
+          src="/src/images/IMG_7085.jpg"
+          alt="Pascal Vorwerk – Gitarrist"
+          class="relative z-10 aspect-[3/4] w-full object-cover"
+        />
+      </div>
+
+      <Text
+        tag="h1"
+        variant="wordmark"
+        class="!text-9xl md:!text-11xl"
+      >
+        PASCAL<br />VORWERK
+      </Text>
+    </div>
+
+
+    <div
+      class="flex flex-col gap-2 pb-8 text-paper/40 sm:flex-row sm:justify-between"
+    >
+      <Text variant="meta">Hamburg, Germany</Text>
+    </div>
+  </Wrapper>
+
+  <div class="bg-accent text-ink">
+    <Wrapper
+      class="grid grid-cols-12 items-end gap-4 py-8 md:gap-8 md:py-24"
+      data-reveal
+    >
+      <Text variant="displayHero" class="col-span-12 md:col-span-9">
+        Guitarist.<br />based in Hamburg.
+         
+      </Text>
+
+      <div class="col-span-12 md:col-span-3">
+        <Text class="max-w-xs">
+          Guitarist, composer and musician creating distinctive sounds
+          and musical experiences. My music moves between jazz, modern rock sounds and personal musical expression.
+        </Text>
+
+        <Text
+          tag="a"
+          variant="meta"
+          href="mailto:DEINE-EMAIL"
+          class="mt-8 inline-flex min-h-[44px] items-center hover:opacity-60"
+        >BOOKING & CONTACT ↗</Text>
+      </div>
+    </Wrapper>
+  </div>
+</section>

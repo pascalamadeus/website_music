@@ -1,0 +1,143 @@
+
+---
+import Wrapper from "../Wrapper.astro";
+import Text from "../Text.astro";
+
+const concerts = [
+  {
+    date: "11.10.2026",
+    venue: "Galerie 21, Hamburg",
+    project: "w/ Kaspar Kuoppamäki",
+    detail: "Between a Partition – Finissage",
+    year: "2026",
+  },
+  {
+    date: "08.10.2026",
+    venue: "Galerie 21, Hamburg",
+    project: "w/ Kaspar Kuoppamäki",
+    detail: "Between a Partition – Opening",
+    year: "2026",
+  },
+  {
+    date: "03.10.2026",
+    venue: "mach|werk, Magdeburg",
+    project: "w/ Kings Cross and Queens",
+    detail: "",
+    year: "2026",
+  },
+  {
+    date: "10.07.2026",
+    venue: "ELBJAZZ, Hamburg",
+    project: "w/ hfmt Bigband",
+    detail: "Sophia Oster // China Moses",
+    year: "2026",
+  },
+  {
+    date: "02.07.2026",
+    venue: "JazzHall, Hamburg",
+    project: "w/ hfmt Bigband",
+    detail: "Summerfestival",
+    year: "2026",
+  },
+];
+
+const years = [...new Set(concerts.map((concert) => concert.year))];
+---
+
+<section class="bg-ink text-paper">
+  <Wrapper class="pt-20 md:pt-32">
+
+    <div class="flex justify-between">
+      <div>
+        <Text variant="meta" class="text-accent">03</Text>
+        <Text variant="meta" class="mt-1 text-paper/40">Live</Text>
+      </div>
+
+      <Text variant="meta" class="max-w-32 text-right text-paper/40">
+        Upcoming shows and past performances
+      </Text>
+    </div>
+
+    <Text variant="displayLarge" class="my-10 md:my-14 text-accent">
+      Live.
+    </Text>
+
+    {years.map((year) => (
+      <div class="mb-16">
+        <Text variant="meta" class="mb-6 text-accent">
+          {year}
+        </Text>
+
+        <ul
+          class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-paper"
+          role="list"
+        >
+          {concerts
+            .filter((concert) => concert.year === year)
+            .map((concert, index) => (
+              <li
+                class="border-b border-r border-paper"
+                data-reveal
+                data-reveal-delay={index * 50}
+              >
+                <div class="flex flex-col gap-3 px-5 py-5 min-h-28 justify-between">
+                  <Text variant="meta" class="text-accent">
+                    {concert.date}
+                  </Text>
+
+                  <div>
+                    <Text variant="meta">
+                      {concert.venue}
+                    </Text>
+
+                    <Text variant="meta" class="mt-1 text-paper/50">
+                      {concert.project}
+                    </Text>
+
+                    {concert.detail && (
+                      <Text variant="meta" class="mt-1 text-paper/40">
+                        {concert.detail}
+                      </Text>
+                    )}
+                  </div>
+                </div>
+              </li>
+            ))}
+        </ul>
+      </div>
+    ))}
+
+    <Text variant="meta" class="mt-10 text-paper/40">
+      More dates coming soon.
+    </Text>
+
+    <footer
+      class="mt-20 md:mt-28 py-8 border-t border-paper flex flex-col sm:flex-row sm:justify-between gap-4"
+    >
+      <Text
+        tag="a"
+        variant="meta"
+        href="mailto:vorwerk.pascal@posteo.org"
+        class="hover:text-accent"
+      >
+        Booking & Contact ↗
+      </Text>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <Text variant="meta">
+          © {new Date().getFullYear()} Pascal Vorwerk · Hamburg, Germany
+        </Text>
+
+        <Text
+          tag="a"
+          variant="meta"
+          href="/impressum"
+          class="text-paper/40 hover:text-accent transition-colors"
+        >
+          Impressum
+        </Text>
+      </div>
+    </footer>
+
+  </Wrapper>
+</section>

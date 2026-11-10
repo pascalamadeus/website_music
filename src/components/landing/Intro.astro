@@ -1,0 +1,141 @@
+
+---
+import Wrapper from "../Wrapper.astro";
+import Text from "../Text.astro";
+---
+
+<section id="about" class="bg-paper text-ink">
+  <Wrapper class="py-20 md:py-32">
+
+    <div class="flex justify-between">
+      <div>
+        <Text variant="meta" class="text-accent">02</Text>
+        <Text variant="meta" class="mt-1 text-ink/40">
+          About
+        </Text>
+      </div>
+
+      <Text variant="meta" class="max-w-32 text-right text-ink/40">
+        Education and Projects
+      </Text>
+    </div>
+
+    <Text
+      variant="display"
+      class="mt-20 md:mt-32"
+      data-reveal
+    >
+      Jazz.<br />
+      Rock.<br />
+      <span class="text-accent">Pop.</span>
+    </Text>
+
+    <div class="mt-12 md:mt-16 max-w-2xl">
+      <Text>
+        I’m Pascal Vorwerk, a guitarist based in Hamburg. 
+        My musical background moves between jazz, rock and pop,
+        shaped by ensemble playing, live performances and a
+        curiosity for different musical styles.
+      </Text>
+    </div>
+
+    <!-- Musical Background -->
+
+    <div class="mt-20 md:mt-32 grid grid-cols-12 border-t border-ink">
+
+      <div class="col-span-12 py-6 md:col-span-4 md:pr-8">
+        <Text variant="meta" class="text-accent">
+          01 / Education
+        </Text>
+
+        <Text variant="meta" class="mt-4 text-ink/40">
+          Guitar lessons
+        </Text>
+
+        <Text class="mt-6">
+          Musical development through guitar lessons with:
+        </Text>
+
+        <Text class="mt-4">
+          Roland Cabezas<br />
+          Sandra Hempel<br />
+          Sven Kerschek<br />
+          Detlef Gralka<br />
+          Sebastian Böhlen<br />
+          Till Paulmann
+        </Text>
+      </div>
+
+      <div class="col-span-12 border-t border-ink py-6 md:col-span-4 md:border-l md:border-t-0 md:px-8">
+        <Text variant="meta" class="text-accent">
+          02 / Ensembles
+        </Text>
+
+        <Text variant="meta" class="mt-4 text-ink/40">
+          Big Band & Symphonic Pop
+        </Text>
+
+        <Text class="mt-6">
+          <span class="font-semibold">KON Bigband Magdeburg</span>
+          <br />
+          Participation in three working phases and regular concerts.
+        </Text>
+
+        <Text class="mt-6">
+          <span class="font-semibold">Symphonic-Pop Ensemble Magdeburg</span>
+          <br />
+          Participation in three working phases and concerts.
+        </Text>
+      </div>
+
+      <div class="col-span-12 border-t border-ink py-6 md:col-span-4 md:border-l md:border-t-0 md:px-8">
+        <Text variant="meta" class="text-accent">
+          03 / Live
+        </Text>
+
+        <Text variant="meta" class="mt-4 text-ink/40">
+          Bands & Projects
+        </Text>
+
+        <Text class="mt-6">
+          <span class="font-semibold">Jam Sessions</span>
+          <br />
+          Regular participation in local jam sessions.
+        </Text>
+
+        <Text class="mt-6">
+          <span class="font-semibold">Combo</span>
+          <br />
+          Background music in various combo formations.
+        </Text>
+
+        <Text class="mt-6">
+          <span class="font-semibold">Cover Bands</span>
+          <br />
+          Lead and rhythm guitar in several rock cover bands.
+        </Text>
+      </div>
+
+    </div>
+
+    <!-- Contact -->
+
+    <div class="mt-20 md:mt-28 border-t border-ink pt-8 flex flex-col sm:flex-row sm:justify-between gap-4">
+
+      <Text variant="meta" class="text-ink/40">
+        Always open to interesting musical projects.
+      </Text>
+
+      <Text
+        tag="a"
+        variant="meta"
+        href="mailto:vorwerk.pascal@posteo.org"
+        class="text-accent hover:opacity-60"
+      >
+        Get in touch ↗
+      </Text>
+
+    </div>
+
+  </Wrapper>
+</section>

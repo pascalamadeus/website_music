@@ -1,0 +1,70 @@
+---
+import Wrapper from "../Wrapper.astro";
+import Text from "../Text.astro";
+---
+
+<section class="min-h-screen bg-ink text-paper">
+  <Wrapper class="pt-20 md:pt-32">
+
+    <div class="flex justify-between">
+      <div>
+        <Text variant="meta" class="text-accent">04</Text>
+        <Text variant="meta" class="mt-1 text-paper/40">
+          Legal
+        </Text>
+      </div>
+
+      <Text variant="meta" class="max-w-32 text-right text-paper/40">
+        Legal information
+      </Text>
+    </div>
+
+    <Text variant="displayLarge" class="my-10 md:my-14 text-accent">
+      Impressum.
+    </Text>
+
+    <div class="max-w-xl space-y-10">
+
+      <div>
+        <Text variant="meta" class="text-accent mb-3">
+          Angaben gemäß § 5 DDG
+        </Text>
+
+        <Text variant="meta">
+          Pascal Vorwerk<br />
+          Geschwister-Scholl-Str.<br />
+          20251 Hamburg<br />
+        </Text>
+      </div>
+
+      <div>
+        <Text variant="meta" class="text-accent mb-3">
+          Kontakt
+        </Text>
+
+        <Text variant="meta">
+          E-Mail: vorwerk.pascal@posteo.org
+        </Text>
+      </div>
+
+    </div>
+
+    <footer class="mt-20 md:mt-28 py-8 border-t border-paper flex flex-col sm:flex-row sm:justify-between gap-4">
+
+      <Text
+        tag="a"
+        variant="meta"
+        href="/"
+        class="hover:text-accent"
+      >
+        ← Back to Home
+      </Text>
+
+      <Text variant="meta">
+        © {new Date().getFullYear()} Pascal Vorwerk · Hamburg, Germany
+      </Text>
+
+    </footer>
+
+  </Wrapper>
+</section>

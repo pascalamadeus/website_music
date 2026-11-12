@@ -7,27 +7,33 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Pascal Vorwerk",
-  url: "https://pascal-vorwerk.de/",
+  url: "https://www.pascal-vorwerk.de/",
   jobTitle: "Guitarist & Musician",
-  description: "Guitarist and musician based in Germany.",
+  description:
+    "Pascal Vorwerk is a guitarist and musician based in Germany.",
+  sameAs: [
+    // Hier später deine Social-Media-Profile ergänzen:
+    // "https://www.instagram.com/...",
+    // "https://www.youtube.com/...",
+  ],
 };
 ---
 
 <AstroSeo
-  title="Pascal Vorwerk — Guitarist & Musician"
-  description="Pascal Vorwerk — Guitarist and musician. Discover music, projects, performances and creative work."
-  canonical="https://pascal-vorwerk.de/"
+  title="Pascal Vorwerk – Guitarist & Musician"
+  description="Official website of Pascal Vorwerk, guitarist and musician based in Germany. Discover music, projects, performances and creative work."
+  canonical="https://www.pascal-vorwerk.de/"
   openGraph={{
-    url: "https://pascal-vorwerk.de/",
-    title: "Pascal Vorwerk — Guitarist & Musician",
+    url: "https://www.pascal-vorwerk.de/",
+    title: "Pascal Vorwerk – Guitarist & Musician",
     description:
-      "Guitarist and musician. Discover music, projects, performances and creative work.",
+      "Official website of Pascal Vorwerk. Discover music, projects, performances and creative work.",
     images: [
       {
-        url: "https://pascal-vorwerk.de/og-image.jpg",
+        url: "https://www.pascal-vorwerk.de/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Pascal Vorwerk — Guitarist & Musician",
+        alt: "Pascal Vorwerk – Guitarist & Musician",
         type: "image/jpeg",
       },
     ],
@@ -37,7 +43,16 @@ const structuredData = {
   }}
 />
 
-<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+<!-- Bing Webmaster Tools -->
+<meta
+  name="msvalidate.01"
+  content="E67E794D8FB287CAC4C0BA4EC2C8F649"
+/>
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(structuredData)}
+/>
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

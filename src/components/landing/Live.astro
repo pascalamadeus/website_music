@@ -111,17 +111,54 @@ const years = [...new Set(concerts.map((concert) => concert.year))];
       More dates coming soon.
     </Text>
 
+
     <footer
-      class="mt-20 md:mt-28 py-8 border-t border-paper flex flex-col sm:flex-row sm:justify-between gap-4"
+      class="mt-20 md:mt-28 py-8 border-t border-paper flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6"
     >
       <Text
         tag="a"
         variant="meta"
-        href="mailto:vorwerk.pascal@posteo.org"
+        href="mailto:vorwwerk.pascal@posteo.org"
         class="hover:text-accent"
       >
         Booking & Contact ↗
       </Text>
+
+      <!-- Social Media Links -->
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2">
+        <li>
+          <Text
+            tag="a"
+            variant="meta"
+            href="https://www.instagram.com/pascalvks/"
+            class="text-paper/60 hover:text-accent transition-colors"
+          >
+            Instagram ↗
+          </Text>
+        </li>
+
+        <li>
+          <Text
+            tag="a"
+            variant="meta"
+            href="https://www.youtube.com/@pascal_vorwerk"
+            class="text-paper/60 hover:text-accent transition-colors"
+          >
+            YouTube ↗
+          </Text>
+        </li>
+
+        <li>
+          <Text
+            tag="a"
+            variant="meta"
+            href="https://open.spotify.com/user/1146165881"
+            class="text-paper/60 hover:text-accent transition-colors"
+          >
+            Spotify ↗
+          </Text>
+        </li>
+      </ul>
 
       <div class="flex flex-wrap items-center gap-3">
         <Text variant="meta">
@@ -138,6 +175,7 @@ const years = [...new Set(concerts.map((concert) => concert.year))];
         </Text>
       </div>
     </footer>
+
 
   </Wrapper>
 </section>
